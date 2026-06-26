@@ -1,0 +1,111 @@
+/* src/styles/variables.css — YMG Professional Blue/Teal Design System */
+/* Color inspiration: 52WMB.com — clean, professional, data-driven palette */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  /* ── Fonts ── */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-accent: 'DM Sans', 'Plus Jakarta Sans', sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  /* ═══════════════════════════════════════════════════
+     52WMB-INSPIRED PROFESSIONAL PALETTE
+     Deep blue/teal trust palette + gold stone accents
+     ═══════════════════════════════════════════════════ */
+
+  /* Backgrounds — clean whites & cool grays */
+  --bg-primary: #f8f9fc;            /* Cool White */
+  --bg-secondary: #f0f2f7;          /* Soft Gray Blue */
+  --bg-tertiary: #e5e8f0;           /* Light Slate */
+  --bg-glass: rgba(255, 255, 255, 0.78);
+  --bg-glass-hover: rgba(255, 255, 255, 0.94);
+  --bg-glass-strong: rgba(255, 255, 255, 0.88);
+
+  /* Dark section backgrounds */
+  --bg-dark: #0c1929;               /* Deep Navy */
+  --bg-dark-secondary: #142236;     /* Dark Steel Blue */
+  --bg-dark-tertiary: #091420;      /* Darkest */
+  --bg-dark-glass: rgba(12, 25, 41, 0.94);
+
+  /* Borders */
+  --border-color: rgba(0, 0, 0, 0.07);
+  --border-color-hover: rgba(22, 101, 167, 0.4);
+  --border-color-subtle: rgba(0, 0, 0, 0.04);
+
+  /* Text */
+  --text-primary: #0f172a;          /* Deep Slate */
+  --text-secondary: #475569;        /* Slate Gray */
+  --text-muted: #94a3b8;            /* Muted */
+  --text-on-dark: #f1f5f9;          /* Light */
+  --text-on-dark-secondary: #cbd5e1;
+
+  /* Accent Colors — Professional Blue-Teal + Gold */
+  --accent-primary: #1665a7;        /* Professional Deep Blue */
+  --accent-primary-rgb: 22, 101, 167;
+  --accent-primary-light: #2b82cc;  /* Lighter Blue */
+  --accent-primary-dark: #0e4f82;   /* Darker Blue */
+  --accent-secondary: #b78e3a;      /* Burnished Gold (kept for stone identity) */
+  --accent-secondary-rgb: 183, 142, 58;
+  --accent-tertiary: #0f8b8d;       /* Teal accent */
+  --accent-success: #16a34a;
+  --accent-warning: #d97706;
+  --accent-danger: #dc2626;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #1665a7 0%, #2b82cc 50%, #0f8b8d 100%);
+  --gradient-hero-vivid: linear-gradient(135deg, #2b82cc 0%, #38a3e8 40%, #1665a7 100%);
+  --gradient-gold: linear-gradient(135deg, #b78e3a 0%, #d4a94a 50%, #8b7355 100%);
+  --gradient-text: linear-gradient(to right, #0f172a, #334155);
+  --gradient-accent-text: linear-gradient(135deg, #1665a7 0%, #2b82cc 50%, #0f8b8d 100%);
+  --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.35) 100%);
+  --gradient-dark: linear-gradient(145deg, #0c1929 0%, #142236 50%, #091420 100%);
+  --gradient-dark-radial: radial-gradient(ellipse at top left, #142236 0%, #0c1929 50%, #091420 100%);
+  --gradient-mesh: conic-gradient(from 180deg at 50% 50%, rgba(22,101,167,0.04) 0deg, transparent 60deg, rgba(15,139,141,0.03) 120deg, transparent 180deg, rgba(183,142,58,0.03) 240deg, transparent 300deg, rgba(22,101,167,0.04) 360deg);
+
+  /* ── COMPACT Spacing ── */
+  --space-xs: 0.2rem;
+  --space-sm: 0.35rem;
+  --space-md: 0.75rem;
+  --space-lg: 1.1rem;
+  --space-xl: 1.6rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3.5rem;
+  --space-4xl: 5rem;
+
+  /* Layout */
+  --container-width-max: 1200px;
+
+  /* Shadows — blue-tinted for professional look */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06), 0 2px 4px rgba(15, 23, 42, 0.03);
+  --shadow-lg: 0 10px 30px rgba(15, 23, 42, 0.08), 0 4px 10px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 18px 50px rgba(15, 23, 42, 0.1), 0 6px 16px rgba(15, 23, 42, 0.06);
+  --shadow-glow: 0 3px 18px rgba(22, 101, 167, 0.18);
+  --shadow-glow-lg: 0 6px 30px rgba(22, 101, 167, 0.25);
+  --shadow-glow-gold: 0 3px 18px rgba(183, 142, 58, 0.18);
+  --shadow-inner: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+
+  /* Border Radius */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Z-indexes */
+  --z-back: -10;
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-overlay: 500;
+  --z-modal: 1000;
+}

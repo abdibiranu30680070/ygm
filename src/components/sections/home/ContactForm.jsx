@@ -1,0 +1,70 @@
+/* src/components/sections/home/ContactForm.jsx */
+import { Mail, Phone, MapPin } from 'lucide-react';
+import { homeData, contactInfo } from '../../../data/siteData';
+
+export default function ContactForm() {
+  const { cta } = homeData;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert('Message sent successfully!');
+    e.target.reset();
+  };
+
+  return (
+    <section id="contact" className="section" style={{ background: 'linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary))' }}>
+      <div className="container">
+        <div className="glass-panel" style={{ padding: 'var(--space-xl) var(--space-lg)', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-lg)', alignItems: 'center', border: '1px solid rgba(22,101,167,0.12)', background: 'radial-gradient(circle at center, rgba(22,101,167,0.03) 0%, rgba(255,255,255,0.95) 100%)' }}>
+          <div>
+            <span className="section-badge" style={{ background: 'rgba(22,101,167,0.12)', color: 'var(--accent-primary)' }}>{cta.badge}</span>
+            <h2 className="section-title" style={{ textAlign: 'left', fontSize: '1.8rem', marginBottom: 'var(--space-sm)' }}>
+              {cta.title}
+            </h2>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: 'var(--space-md)' }}>
+              {cta.text}
+            </p>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <MapPin size={16} style={{ color: 'var(--accent-primary)' }} />
+                <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{contactInfo.address}</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Mail size={16} style={{ color: 'var(--accent-primary)' }} />
+                <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{contactInfo.email}</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <Phone size={16} style={{ color: 'var(--accent-primary)' }} />
+                <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{contactInfo.phone}</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <form className="glass-panel" style={{ padding: 'var(--space-md)', background: 'rgba(255,255,255,0.6)', border: '1px solid var(--border-color)' }} onSubmit={handleSubmit}>
+              <div className="input-group">
+                <label className="input-label" htmlFor="ymg-name">Your Name</label>
+                <input type="text" id="ymg-name" className="input-field" placeholder="Yonas Kebede" required />
+              </div>
+              <div className="input-group">
+                <label className="input-label" htmlFor="ymg-company">Company Name</label>
+                <input type="text" id="ymg-company" className="input-field" placeholder="Construction Co." />
+              </div>
+              <div className="input-group">
+                <label className="input-label" htmlFor="ymg-email">Email Address</label>
+                <input type="email" id="ymg-email" className="input-field" placeholder="name@company.com" required />
+              </div>
+              <div className="input-group">
+                <label className="input-label" htmlFor="ymg-message">Inquiry Details</label>
+                <textarea id="ymg-message" className="input-field" rows="3" placeholder="Describe your stone dimension or supply requirements..." required style={{ resize: 'none' }}></textarea>
+              </div>
+              <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
+                Submit Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
