@@ -49,6 +49,8 @@
 .logo-image {
   display: block;
   width: 116px;
+  max-height: 48px;
+  object-fit: contain;
   height: auto;
   transition: width var(--transition-smooth);
 }
@@ -234,7 +236,7 @@
   min-height: 82px;
   padding: 0 clamp(22px, 2.6vw, 44px);
   display: grid;
-  grid-template-columns: minmax(170px, 260px) 1fr auto;
+  grid-template-columns: minmax(140px, 220px) 1fr auto;
   align-items: center;
   gap: var(--space-xl);
   transition: min-height var(--transition-smooth), padding var(--transition-smooth);
@@ -249,7 +251,8 @@
 }
 
 .home-navbar .logo-image {
-  width: 128px;
+  width: 112px;
+  max-height: 52px;
 }
 
 .home-navbar.scrolled .logo-image {
@@ -332,7 +335,8 @@
   .home-navbar .logo-image,
   .home-navbar.scrolled .logo-image,
   .logo-image {
-    width: 108px;
+    width: 96px;
+    max-height: 42px;
   }
 
   .nav-links {
