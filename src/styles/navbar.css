@@ -231,8 +231,8 @@
 }
 
 .home-nav-main {
-  min-height: 120px;
-  padding: 0 clamp(28px, 3vw, 52px);
+  min-height: 82px;
+  padding: 0 clamp(22px, 2.6vw, 44px);
   display: grid;
   grid-template-columns: minmax(170px, 260px) 1fr auto;
   align-items: center;
@@ -249,7 +249,7 @@
 }
 
 .home-navbar .logo-image {
-  width: 150px;
+  width: 128px;
 }
 
 .home-navbar.scrolled .logo-image {
