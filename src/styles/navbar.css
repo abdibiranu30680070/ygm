@@ -349,16 +349,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(12, 25, 41, 0.99) 0%, rgba(8, 17, 29, 0.99) 100%) !important;
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    background-color: #0a1628 !important;
+    background-image: none !important;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     flex-direction: column;
-    padding: var(--space-xl) var(--space-lg) !important;
+    align-items: flex-start !important;
+    padding: 30px 24px !important;
     gap: var(--space-md) !important;
     transform: translateX(100%);
     transition: transform var(--transition-smooth);
     z-index: calc(var(--z-modal) - 1);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+    overflow-y: auto;
   }
 
   .nav-links.open {
