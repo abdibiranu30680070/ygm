@@ -1,5 +1,5 @@
 /* src/components/sections/home/Hero.jsx */
-import { ArrowRight, Sparkles, Building2, ShieldCheck, Award } from 'lucide-react';
+import { ArrowRight, Building2, ShieldCheck, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { homeData } from '../../../data/siteData';
 import '../../../styles/hero.css';
@@ -14,9 +14,8 @@ export default function Hero() {
             {hero.title}
           </h1>
 
-          <p className="hero-desc">
-            {hero.subtitle}. {hero.description}
-          </p>
+          <p className="hero-kicker">{hero.subtitle}</p>
+          <p className="hero-desc">{hero.description}</p>
 
           <div className="hero-buttons">
             <Link to={hero.ctas[0].href} className="btn btn-primary">

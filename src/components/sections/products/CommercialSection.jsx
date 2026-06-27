@@ -1,9 +1,9 @@
 /* src/components/sections/products/CommercialSection.jsx */
 import { commercialData } from '../../../data/siteData';
-import { ShieldCheck, Package, DollarSign, Award, CheckCircle2, ChevronRight } from 'lucide-react';
+import { Package, DollarSign, Award, CheckCircle2, ChevronRight } from 'lucide-react';
 
 export default function CommercialSection() {
-  const { customSolutions, qualityGrading, packaging, pricing, marketSegmentation, valueProposition } = commercialData;
+  const { customSolutions, qualityGrading, packaging, pricing, valueProposition } = commercialData;
 
   return (
     <div id="commercial">

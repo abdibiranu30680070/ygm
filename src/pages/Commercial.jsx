@@ -1,6 +1,6 @@
 /* src/pages/Commercial.jsx */
 import { commercialData } from '../data/siteData';
-import { Layers, ShieldCheck, Box, Gem, Settings, CheckCircle2, ChevronRight, Package, DollarSign, Award } from 'lucide-react';
+import { Layers, Box, Gem, Settings, CheckCircle2, ChevronRight, Package, DollarSign, Award } from 'lucide-react';
 
 export default function Commercial() {
   const {

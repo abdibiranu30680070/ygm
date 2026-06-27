@@ -19,14 +19,39 @@ export default function Navbar() {
 
   const closeMenu = () => setIsMenuOpen(false);
 
-  const isActive = (path) => location.pathname === path ? 'active' : '';
+  const isActive = (path) => {
+    if (path === '/') return location.pathname === '/' ? 'active' : '';
+    return location.pathname.startsWith(path) ? 'active' : '';
+  };
   const isHome = location.pathname === '/';
 
   const navItems = [
     { to: '/', label: 'Home' },
-    { to: '/about', label: 'About' },
-    { to: '/products', label: 'Products' },
-    { to: '/operations', label: 'Operations' },
+    {
+      to: '/about',
+      label: 'About',
+      children: [
+        { to: '/about', label: 'About YMG' },
+        { to: '/about/profile', label: 'Company Profile' },
+      ]
+    },
+    {
+      to: '/products',
+      label: 'Products',
+      children: [
+        { to: '/products', label: 'Products Portfolio' },
+        { to: '/products/commercial', label: 'Commercial Offerings' },
+      ]
+    },
+    {
+      to: '/operations',
+      label: 'Operations',
+      children: [
+        { to: '/operations', label: 'Operations Overview' },
+        { to: '/operations/mining', label: 'Mining Operations' },
+        { to: '/operations/plant', label: 'Processing Plant' },
+      ]
+    },
     { to: '/markets', label: 'Markets' },
     { to: '/sustainability', label: 'Sustainability' },
     { to: '/future-vision', label: 'Future Vision' },
@@ -58,10 +83,21 @@ export default function Navbar() {
 
           <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
             {navItems.map((item) => (
-              <li key={item.to}>
+              <li key={item.to} className={item.children ? 'nav-item-dropdown' : ''}>
                 <Link to={item.to} className={`nav-link ${isActive(item.to)}`} onClick={closeMenu}>
                   {item.label}
                 </Link>
+                {item.children && (
+                  <ul className="dropdown-menu">
+                    {item.children.map((subItem) => (
+                      <li key={subItem.to}>
+                        <Link to={subItem.to} className="dropdown-item" onClick={closeMenu}>
+                          {subItem.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>

@@ -1,6 +1,6 @@
 /* src/components/sections/home/NewsSection.jsx */
 import { newsData } from '../../../data/siteData';
-import { Newspaper, ExternalLink, Calendar, Tag } from 'lucide-react';
+import { ExternalLink, Calendar, Tag } from 'lucide-react';
 
 const categoryColors = {
   Industry: 'var(--accent-primary)',

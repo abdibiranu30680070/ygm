@@ -12,9 +12,10 @@ export default function ProductsOverview() {
           <p className="section-subtitle">{productsOverview.footerNote}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 400px), 1fr))', gap: 'var(--space-xl)' }}>
+        <div className="product-card-grid">
           {/* Granite Products */}
-          <div className="glass-panel" style={{ padding: 'var(--space-2xl)', display: 'grid', gridTemplateColumns: '1fr', gap: 'var(--space-md)' }}>
+          <div className="glass-panel product-visual-card">
+            <img src="/stone_bg.png" alt="Close-up granite surface texture" loading="lazy" />
             <div style={{ borderLeft: '3px solid var(--accent-primary)', paddingLeft: '15px' }}>
               <h3 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-display)', marginBottom: '5px' }}>
                 {productsOverview.items[0].type}
@@ -40,7 +41,8 @@ export default function ProductsOverview() {
           </div>
 
           {/* Limestone Products */}
-          <div className="glass-panel" style={{ padding: 'var(--space-2xl)', display: 'grid', gridTemplateColumns: '1fr', gap: 'var(--space-md)' }}>
+          <div className="glass-panel product-visual-card">
+            <img src="/ymg_hero_bg.png" alt="Limestone quarry and natural stone operation" loading="lazy" />
             <div style={{ borderLeft: '3px solid var(--accent-secondary)', paddingLeft: '15px' }}>
               <h3 style={{ fontSize: '1.8rem', fontFamily: 'var(--font-display)', marginBottom: '5px' }}>
                 {productsOverview.items[1].type}

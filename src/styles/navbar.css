@@ -398,4 +398,106 @@
   .menu-toggle {
     display: block;
   }
+
+  /* Mobile Dropdown styles nested in media query */
+  .dropdown-menu {
+    position: static;
+    transform: none !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding: 0 !important;
+    margin-left: 18px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 6px !important;
+  }
+
+  .dropdown-item {
+    font-size: 0.85rem !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    padding: 4px 0 !important;
+    text-align: left;
+    background: transparent !important;
+  }
+
+  .dropdown-item:hover {
+    color: #ffffff !important;
+  }
+}
+
+/* === DROPDOWN MENUS (Desktop) === */
+@media (min-width: 901px) {
+  .nav-item-dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: var(--bg-glass-strong);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--space-sm) 0;
+    min-width: 195px;
+    list-style: none;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-normal);
+    z-index: var(--z-overlay);
+    margin-top: 12px;
+  }
+
+  /* Arrow indicator on dropdown */
+  .dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: var(--bg-glass-strong);
+    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
+  }
+
+  .nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .dropdown-item {
+    display: block;
+    padding: 8px 20px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-family: var(--font-accent);
+    transition: all var(--transition-fast);
+    text-align: left;
+  }
+
+  .dropdown-item:hover {
+    background: rgba(22, 101, 167, 0.06);
+    color: var(--accent-primary);
+  }
+
+  .home-navbar .dropdown-item {
+    color: #050b1f;
+  }
+
+  .home-navbar .dropdown-item:hover {
+    color: #00aeea;
+    background: rgba(0, 174, 234, 0.06);
+  }
 }

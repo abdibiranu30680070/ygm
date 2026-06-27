@@ -40,8 +40,6 @@ export default function SearchOverlay({ isOpen, onClose }) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
-      setQuery('');
-      setResults([]);
     }
     return () => {
       document.body.style.overflow = 'unset';
@@ -59,7 +57,7 @@ export default function SearchOverlay({ isOpen, onClose }) {
     const matches = [];
 
     // Helper to recursively scan object values
-    const searchInObject = (obj, pathParts = []) => {
+    const searchInObject = (obj) => {
       const found = [];
       const traverse = (item) => {
         if (!item) return;
@@ -100,6 +98,12 @@ export default function SearchOverlay({ isOpen, onClose }) {
 
   const handleSelectResult = (path) => {
     navigate(path);
+    handleClose();
+  };
+
+  const handleClose = () => {
+    setQuery('');
+    setResults([]);
     onClose();
   };
 
@@ -119,7 +123,7 @@ export default function SearchOverlay({ isOpen, onClose }) {
     }}>
       {/* Close button */}
       <button 
-        onClick={onClose}
+        onClick={handleClose}
         style={{
           position: 'absolute',
           top: '30px',

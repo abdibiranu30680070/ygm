@@ -1,133 +1,76 @@
-import { futureExpansionData } from '../data/siteData';
-import { TrendingUp, Cpu, Globe, Leaf, DollarSign, Users, Factory, Pickaxe, Package, CheckCircle2, ChevronRight, Milestone } from 'lucide-react';
+import { CheckCircle2, Cpu, Factory, Globe, Leaf, Milestone, Package, Pickaxe, TrendingUp } from 'lucide-react';
 import PageHero from '../components/sections/PageHero';
-
-const sectionIcons = {
-  'Expansion of Mining': <Pickaxe size={24} style={{ color: 'var(--accent-primary)' }} />,
-  'Processing Plant': <Factory size={24} style={{ color: 'var(--accent-primary)' }} />,
-  'Technology': <Cpu size={24} style={{ color: 'var(--accent-primary)' }} />,
-  'Export Market': <Globe size={24} style={{ color: 'var(--accent-primary)' }} />,
-  'Product Diversification': <Package size={24} style={{ color: 'var(--accent-primary)' }} />,
-  'Infrastructure': <TrendingUp size={24} style={{ color: 'var(--accent-primary)' }} />,
-  'Sustainability': <Leaf size={24} style={{ color: 'var(--accent-secondary)' }} />,
-  'Investment': <DollarSign size={24} style={{ color: 'var(--accent-primary)' }} />,
-  'Human Capital': <Users size={24} style={{ color: 'var(--accent-primary)' }} />,
-};
-
-const getIcon = (title) => {
-  for (const [key, icon] of Object.entries(sectionIcons)) {
-    if (title.includes(key)) return icon;
-  }
-  return <TrendingUp size={24} style={{ color: 'var(--accent-primary)' }} />;
-};
+import ContactForm from '../components/sections/home/ContactForm';
+import { futureExpansionData } from '../data/siteData';
 
 export default function FutureVision() {
-  const {
-    hero, overview, miningExpansion, plantGrowth, technology,
-    exportExpansion, diversification, infrastructure, greenStrategy,
-    investment, humanCapital, roadmap, visionStatement, commitmentStatement
-  } = futureExpansionData;
-
-  const expansionSections = [
-    miningExpansion, plantGrowth, technology,
-    exportExpansion, diversification, infrastructure,
-    greenStrategy, investment, humanCapital
+  const initiatives = [
+    { icon: Pickaxe, data: futureExpansionData.miningExpansion },
+    { icon: Factory, data: futureExpansionData.plantGrowth },
+    { icon: Cpu, data: futureExpansionData.technology },
+    { icon: Globe, data: futureExpansionData.exportExpansion },
+    { icon: Package, data: futureExpansionData.diversification },
+    { icon: Leaf, data: futureExpansionData.greenStrategy },
   ];
 
   return (
     <div className="future-vision-page fade-in">
-      <PageHero title={hero.title} subtitle={hero.subtitle} badge="2026–2035" />
+      <PageHero title="Future Vision" subtitle="A focused roadmap for capacity, technology, exports, and responsible growth." badge="2026-2035" />
 
-      {/* Overview */}
       <section className="section">
-        <div className="container" style={{ maxWidth: '800px', textAlign: 'center' }}>
-          <h2 className="section-title" style={{ fontSize: '2rem', marginBottom: '15px' }}>{overview.title}</h2>
-          {overview.paragraphs.map((p, i) => (
-            <p key={i} style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: '12px' }}>{p}</p>
-          ))}
+        <div className="container page-brief-grid">
+          <div>
+            <span className="section-badge">Roadmap</span>
+            <h2 className="section-title" style={{ textAlign: 'left' }}>{futureExpansionData.overview.title}</h2>
+            <p className="page-lead">{futureExpansionData.overview.paragraphs[0]}</p>
+            <p className="page-copy">{futureExpansionData.overview.paragraphs[1]}</p>
+          </div>
+          <img className="page-visual" src="/stone_bg.png" alt="Natural stone surface representing YMG product expansion" />
         </div>
       </section>
 
-      {/* Expansion Sections Grid */}
-      <section className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+      <section className="section" style={{ background: 'var(--bg-secondary)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-badge">Strategic Initiatives</span>
-            <h2 className="section-title">Growth & Expansion Plans</h2>
-            <p className="section-subtitle">Nine strategic pillars driving YMG's long-term development</p>
+            <span className="section-badge">Growth Priorities</span>
+            <h2 className="section-title">Strategic Initiatives</h2>
           </div>
-
-          <div className="responsive-grid-3">
-            {expansionSections.map((sec, idx) => (
-              <div key={idx} className="glass-panel" style={{ padding: 'var(--space-xl)', background: 'var(--bg-primary)' }}>
-                <div style={{ display: 'flex', gap: '12px', alignItems: 'center', marginBottom: '15px' }}>
-                  {getIcon(sec.title)}
-                  <h3 style={{ fontSize: '1.1rem' }}>{sec.title}</h3>
-                </div>
-                <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', marginBottom: '12px' }}>{sec.description}</p>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '5px', marginBottom: '10px' }}>
-                  {sec.points.map((pt, i) => (
-                    <li key={i} style={{ fontSize: '0.8rem', display: 'flex', alignItems: 'flex-start', gap: '6px', color: 'var(--text-secondary)' }}>
-                      <CheckCircle2 size={12} style={{ color: 'var(--accent-primary)', flexShrink: 0, marginTop: '2px' }} />
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
-                <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', fontStyle: 'italic', borderTop: '1px solid var(--border-color)', paddingTop: '8px' }}>{sec.outro}</p>
+          <div className="overview-card-grid three">
+            {initiatives.map(({ icon: Icon, data }) => (
+              <div className="glass-panel overview-card list-card" key={data.title}>
+                <Icon size={25} />
+                <h3>{data.title}</h3>
+                {data.points.slice(0, 3).map((item) => (
+                  <span key={item}><CheckCircle2 size={14} /> {item}</span>
+                ))}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Strategic Roadmap Timeline */}
       <section className="section">
         <div className="container">
           <div className="section-header">
             <span className="section-badge">Timeline</span>
-            <h2 className="section-title">{roadmap.title}</h2>
+            <h2 className="section-title">{futureExpansionData.roadmap.title}</h2>
           </div>
-
-          <div className="responsive-grid-3" style={{ position: 'relative' }}>
-            {/* Connecting line */}
-            <div className="timeline-connector" style={{ position: 'absolute', top: '28px', left: '16.5%', right: '16.5%', height: '3px', background: 'linear-gradient(90deg, var(--accent-primary), var(--accent-secondary))', zIndex: 0 }}></div>
-
-            {roadmap.phases.map((phase, i) => (
-              <div key={i} className="glass-panel" style={{ padding: 'var(--space-xl)', position: 'relative', zIndex: 1, textAlign: 'center' }}>
-                <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'var(--gradient-hero)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 15px', boxShadow: 'var(--shadow-glow)' }}>
-                  <Milestone size={24} style={{ color: 'white' }} />
-                </div>
-                <h3 style={{ fontSize: '1.1rem', color: 'var(--accent-primary)', marginBottom: '4px' }}>{phase.name}</h3>
-                <p style={{ fontSize: '0.9rem', fontWeight: 700, marginBottom: '12px' }}>{phase.label}</p>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '6px', textAlign: 'left' }}>
-                  {phase.items.map((item, ii) => (
-                    <li key={ii} style={{ fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--text-secondary)' }}>
-                      <ChevronRight size={12} style={{ color: 'var(--accent-primary)' }} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+          <div className="overview-card-grid three">
+            {futureExpansionData.roadmap.phases.map((phase) => (
+              <div className="glass-panel overview-card list-card" key={phase.name}>
+                <Milestone size={25} />
+                <h3>{phase.name}</h3>
+                <p>{phase.label}</p>
+                {phase.items.slice(0, 3).map((item) => (
+                  <span key={item}><TrendingUp size={14} /> {item}</span>
+                ))}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Vision & Commitment */}
-      <section className="section dark-section" style={{ textAlign: 'center' }}>
-        <div className="container" style={{ maxWidth: '850px' }}>
-          <h2 className="section-title" style={{ fontSize: '2.2rem', marginBottom: '15px' }}>{visionStatement.title}</h2>
-          <p style={{ color: 'var(--text-on-dark-secondary)', fontSize: '1.15rem', lineHeight: '1.8', fontStyle: 'italic', marginBottom: '35px' }}>
-            "{visionStatement.text}"
-          </p>
-          <h3 style={{ fontSize: '1.3rem', color: 'var(--accent-primary)', marginBottom: '15px' }}>{commitmentStatement.title}</h3>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
-            {commitmentStatement.points.map((pt, i) => (
-              <span key={i} style={{ fontSize: '0.85rem', background: 'rgba(183,142,58,0.15)', color: 'var(--accent-primary)', padding: '8px 18px', borderRadius: 'var(--radius-full)', fontWeight: 600 }}>{pt}</span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ContactForm />
     </div>
   );
 }

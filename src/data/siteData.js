@@ -13,8 +13,8 @@ export const homeData = {
     badge: "Ethiopia",
     badgeLabel: "Premium Natural Stone Solutions",
     title: "YMG Construction & Mining",
-    subtitle: "Delivering Premium Ethiopian Natural Stone Solutions for Local and Global Markets",
-    description: "YMG is a premium Ethiopian industrial company specializing in the extraction, processing, and supply of high-quality granite and limestone. We combine rich natural resources with modern technology to deliver durable, internationally competitive stone products.",
+    subtitle: "Premium Ethiopian Granite & Limestone",
+    description: "From quarry to finished slabs, YMG supplies durable natural stone for construction, infrastructure, and architectural projects.",
     ctas: [
       { label: "Explore Products", href: "/products", isPrimary: true },
       { label: "Mining Operations", href: "/operations", isPrimary: false },
@@ -23,10 +23,10 @@ export const homeData = {
   },
   introduction: {
     badge: "Company Introduction",
-    title: "A Professionally Established Industrial Enterprise",
-    description1: "YMG is a premium industrial enterprise developing, processing, and distributing high-quality natural stone resources across Ethiopia.",
-    description2: "Focusing on operational excellence and sustainable extraction, we are a trusted supplier of granite and limestone for construction and international buyers.",
-    description3: "Our end-to-end operations seamlessly integrate quarry development, advanced processing, and efficient logistics for consistent, world-class delivery."
+    title: "Reliable Natural Stone Supply From Ethiopia",
+    description1: "YMG develops, processes, and supplies selected granite and limestone resources for demanding construction markets.",
+    description2: "Our integrated model covers quarry development, processing, quality control, and delivery.",
+    description3: "Clients work with one accountable supplier from raw block selection to finished stone."
   },
   coreIdentity: {
     badge: "Core Identity",
@@ -64,31 +64,31 @@ export const homeData = {
       {
         type: "Granite Products",
         tagline: "Structural & Architectural Slabs",
-        desc: "YMG produces high-quality granite materials suitable for structural and architectural applications including slabs, blocks, and custom-cut stone products."
+        desc: "Dense, durable granite for slabs, blocks, cladding, facades, flooring, and custom dimensions."
       },
       {
         type: "Limestone Products",
         tagline: "Industrial & Structural Slabs",
-        desc: "Our limestone materials are widely used in construction, cement production, and industrial applications, ensuring durability and performance."
+        desc: "Consistent limestone for construction, cement inputs, architectural finishes, and industrial supply."
       }
     ],
-    footerNote: "Each product is processed under strict quality standards to ensure consistency, strength, and market suitability."
+    footerNote: "Selected stone. Controlled processing. Consistent supply."
   },
   miningCapability: {
-    badge: "Mining Capability",
-    title: "Integrated Systems",
+    badge: "Operations",
+    title: "From Quarry to Delivery",
     items: [
       { step: "01", title: "Quarry exploration and extraction" },
       { step: "02", title: "Raw material selection and grading" },
       { step: "03", title: "Industrial cutting and polishing" },
       { step: "04", title: "Quality inspection and packaging" }
     ],
-    footerNote: "Our production system is designed to maximize efficiency while maintaining environmental and safety standards."
+    footerNote: "A clear production flow keeps quality visible at every stage."
   },
   whyChoose: {
     badge: "Why Choose YMG",
-    title: "Delivering Trust and Value",
-    description: "Customers and partners choose YMG because we provide:",
+    title: "Built for Serious Buyers",
+    description: "A practical supply partner for builders, developers, and international buyers.",
     points: [
       "Consistent product quality",
       "Reliable supply capacity",
@@ -96,12 +96,37 @@ export const homeData = {
       "Competitive pricing structure",
       "Strong commitment to long-term partnerships"
     ],
-    footerNote: "We do not only supply stone materials—we deliver trust, performance, and long-term value."
+    footerNote: "Reliable stone supply depends on disciplined sourcing, processing, inspection, and communication."
+  },
+  gallery: {
+    badge: "Gallery",
+    title: "Stone, Quarry, and Finish",
+    subtitle: "A visual look at YMG's quarry resources, processed stone surfaces, and project-ready materials.",
+    items: [
+      {
+        title: "Quarry Resources",
+        caption: "Selected extraction sites",
+        image: "/ymg_hero_bg.png",
+        alt: "YMG Ethiopian natural stone quarry landscape"
+      },
+      {
+        title: "Stone Texture",
+        caption: "Natural surface character",
+        image: "/stone_bg.png",
+        alt: "Close-up texture of natural stone supplied by YMG"
+      },
+      {
+        title: "Finished Materials",
+        caption: "Ready for project supply",
+        image: "/ymg_slabs_warehouse.png",
+        alt: "Processed granite and limestone materials for construction projects"
+      }
+    ]
   },
   cta: {
     badge: "Call to Action",
     title: "Ready to Partner?",
-    text: "YMG welcomes collaboration with construction companies, investors, and international partners seeking reliable natural stone supply solutions. Contact us today to discuss your project requirements or business opportunities."
+    text: "Send your stone type, quantity, dimensions, and delivery needs. Our team will respond with the next steps."
   }
 };
 

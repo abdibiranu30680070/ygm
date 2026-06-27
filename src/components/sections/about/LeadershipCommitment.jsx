@@ -1,6 +1,5 @@
 /* src/components/sections/about/LeadershipCommitment.jsx */
 import { aboutData } from '../../../data/siteData';
-import { Link } from 'react-router-dom';
 
 export default function LeadershipCommitment() {
   const { leadership, closing } = aboutData;

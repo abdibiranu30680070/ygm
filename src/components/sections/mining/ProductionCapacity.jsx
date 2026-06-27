@@ -1,6 +1,5 @@
 /* src/components/sections/mining/ProductionCapacity.jsx */
 import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { miningData } from '../../../data/siteData';
 
 export default function ProductionCapacity() {

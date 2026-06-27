@@ -6,7 +6,7 @@ export default function CorporateIdentitySection() {
   const {
     positioning, visionMission, visualIdentity, communicationStyle,
     messagingFramework, channels, brandArchitecture, reputation,
-    digitalBranding, brandCommitment
+    brandCommitment
   } = corporateIdentityData;
 
   return (

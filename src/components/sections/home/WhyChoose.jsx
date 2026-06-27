@@ -1,13 +1,15 @@
 /* src/components/sections/home/WhyChoose.jsx */
-import { Sparkles, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, BadgeCheck, Handshake, PackageCheck, ShieldCheck, Sparkles, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { homeData } from '../../../data/siteData';
 
 export default function WhyChoose() {
   const { whyChoose } = homeData;
+  const icons = [BadgeCheck, PackageCheck, ShieldCheck, TrendingUp, Handshake];
+
   return (
     <section id="why-choose" className="section" style={{ borderBottom: '1px solid var(--border-color)' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-2xl)', alignItems: 'center' }}>
+      <div className="container why-grid">
         <div>
           <span className="section-badge">{whyChoose.badge}</span>
           <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 'var(--space-md)' }}>
@@ -19,8 +21,11 @@ export default function WhyChoose() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
             {whyChoose.points.map((point, idx) => (
               <div key={idx} style={{ display: 'flex', gap: '12px', alignItems: 'flex-start' }}>
-                <div style={{ display: 'flex', width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(183,142,58,0.08)', color: 'var(--accent-primary)', justifyContent: 'center', alignItems: 'center', fontSize: '0.75rem', fontWeight: 'bold', marginTop: '3px' }}>
-                  ✓
+                <div style={{ display: 'flex', width: '32px', height: '32px', borderRadius: 'var(--radius-sm)', background: 'rgba(22,101,167,0.08)', color: 'var(--accent-primary)', justifyContent: 'center', alignItems: 'center', flex: '0 0 32px' }}>
+                  {(() => {
+                    const Icon = icons[idx] || BadgeCheck;
+                    return <Icon size={17} />;
+                  })()}
                 </div>
                 <div>
                   <h4 style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--text-primary)' }}>{point}</h4>

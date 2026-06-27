@@ -7,7 +7,15 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message sent successfully!');
+    const form = e.currentTarget;
+    const name = form.elements['ymg-name'].value;
+    const company = form.elements['ymg-company'].value;
+    const email = form.elements['ymg-email'].value;
+    const message = form.elements['ymg-message'].value;
+    const subject = encodeURIComponent(`YMG inquiry from ${company || name}`);
+    const body = encodeURIComponent(`Name: ${name}\nCompany: ${company || 'N/A'}\nEmail: ${email}\n\nInquiry:\n${message}`);
+
+    window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
     e.target.reset();
   };
 
@@ -44,19 +52,19 @@ export default function ContactForm() {
             <form className="glass-panel" style={{ padding: 'var(--space-md)', background: 'rgba(255,255,255,0.6)', border: '1px solid var(--border-color)' }} onSubmit={handleSubmit}>
               <div className="input-group">
                 <label className="input-label" htmlFor="ymg-name">Your Name</label>
-                <input type="text" id="ymg-name" className="input-field" placeholder="Yonas Kebede" required />
+                <input type="text" id="ymg-name" name="ymg-name" className="input-field" placeholder="Yonas Kebede" required />
               </div>
               <div className="input-group">
                 <label className="input-label" htmlFor="ymg-company">Company Name</label>
-                <input type="text" id="ymg-company" className="input-field" placeholder="Construction Co." />
+                <input type="text" id="ymg-company" name="ymg-company" className="input-field" placeholder="Construction Co." />
               </div>
               <div className="input-group">
                 <label className="input-label" htmlFor="ymg-email">Email Address</label>
-                <input type="email" id="ymg-email" className="input-field" placeholder="name@company.com" required />
+                <input type="email" id="ymg-email" name="ymg-email" className="input-field" placeholder="name@company.com" required />
               </div>
               <div className="input-group">
                 <label className="input-label" htmlFor="ymg-message">Inquiry Details</label>
-                <textarea id="ymg-message" className="input-field" rows="3" placeholder="Describe your stone dimension or supply requirements..." required style={{ resize: 'none' }}></textarea>
+                <textarea id="ymg-message" name="ymg-message" className="input-field" rows="3" placeholder="Describe your stone dimension or supply requirements..." required style={{ resize: 'none' }}></textarea>
               </div>
               <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
                 Submit Inquiry

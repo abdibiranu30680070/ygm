@@ -1,9 +1,9 @@
 import Hero from '../components/sections/home/Hero';
 import CompanyIntro from '../components/sections/home/CompanyIntro';
-import CoreIdentity from '../components/sections/home/CoreIdentity';
 import ProductsOverview from '../components/sections/home/ProductsOverview';
 import MiningCapability from '../components/sections/home/MiningCapability';
 import WhyChoose from '../components/sections/home/WhyChoose';
+import GalleryPreview from '../components/sections/home/GalleryPreview';
 import NewsSection from '../components/sections/home/NewsSection';
 import ContactForm from '../components/sections/home/ContactForm';
 
@@ -15,10 +15,10 @@ export default function Home() {
 
       <Hero />
       <CompanyIntro />
-      <CoreIdentity />
       <ProductsOverview />
       <MiningCapability />
       <WhyChoose />
+      <GalleryPreview />
       <NewsSection />
       <ContactForm />
     </div>

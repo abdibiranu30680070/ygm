@@ -12,7 +12,7 @@ export default function MiningCapability() {
           <p className="section-subtitle">{miningCapability.footerNote}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'var(--space-lg)' }}>
+        <div className="operations-grid">
           {miningCapability.items.map((step, i) => (
             <div key={i} className="glass-panel" style={{ padding: 'var(--space-lg)', position: 'relative' }}>
               <span style={{ fontSize: '2.5rem', fontWeight: 800, color: 'rgba(183,142,58,0.12)', fontFamily: 'var(--font-display)', position: 'absolute', top: '10px', right: '15px' }}>
@@ -21,9 +21,6 @@ export default function MiningCapability() {
               <h4 style={{ fontSize: '1.1rem', fontWeight: 700, marginTop: '20px', marginBottom: '10px', color: 'var(--text-primary)' }}>
                 {step.title}
               </h4>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', lineHeight: '1.6' }}>
-                Operational capability and safety compliance aligned.
-              </p>
             </div>
           ))}
         </div>
