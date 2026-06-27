@@ -1,7 +1,15 @@
 /* src/components/layout/Navbar.jsx */
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Globe2, Mail, MapPin, Menu, Search, X } from 'lucide-react';
+import {
+  Globe2,
+  Mail,
+  MapPin,
+  Menu,
+  Search,
+  X,
+} from "lucide-react";
+import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
 import SearchOverlay from './SearchOverlay';
 import '../../styles/navbar.css';
 
@@ -67,12 +75,38 @@ export default function Navbar() {
                 <span><MapPin size={16} /> Addis Ababa, Ethiopia</span>
                 <span><Mail size={16} /> info@ymg.com</span>
               </div>
-              <div className="home-nav-socials" aria-label="Social links">
-                <a href="#" aria-label="Facebook" className="social-text">f</a>
-                <a href="#" aria-label="Instagram" className="social-text">ig</a>
-                <a href="#" aria-label="Twitter" className="social-text">x</a>
-                <a href="#" aria-label="Website language"><Globe2 size={19} /></a>
-              </div>
+             <div className="home-nav-socials" aria-label="Social links">
+  <a
+    href="https://facebook.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+  >
+    <FaFacebookF size={18} />
+  </a>
+
+  <a
+    href="https://instagram.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram"
+  >
+    <FaInstagram size={18} />
+  </a>
+
+  <a
+    href="https://x.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="X"
+  >
+    <FaXTwitter size={18} />
+  </a>
+
+  <a href="#" aria-label="Language">
+    <Globe2 size={18} />
+  </a>
+</div>
             </div>
           )}
 
