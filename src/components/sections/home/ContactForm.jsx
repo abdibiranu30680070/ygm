@@ -67,7 +67,7 @@ export default function ContactForm() {
                 <textarea id="ymg-message" name="ymg-message" className="input-field" rows="3" placeholder="Describe your stone dimension or supply requirements..." required style={{ resize: 'none' }}></textarea>
               </div>
               <button type="submit" className="btn btn-primary" style={{ width: '100%' }}>
-                Submit Inquiry
+                Submit 
               </button>
             </form>
           </div>
