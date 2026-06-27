@@ -146,10 +146,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
+  align-items: stretch;
 }
 
 .overview-card-grid.four {
   grid-template-columns: repeat(4, 1fr);
+  align-items: stretch;
 }
 
 .overview-card-grid.three {
@@ -327,3 +329,4 @@
     min-height: 240px;
   }
 }
+

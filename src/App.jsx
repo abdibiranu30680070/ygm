@@ -1,7 +1,9 @@
 /* src/App.jsx */
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppLayout from './components/layout/AppLayout';
 import ScrollToHashElement from './components/layout/ScrollToHashElement';
+import LoadingScreen from './components/layout/LoadingScreen';
 import Home from './pages/Home';
 import About from './pages/About';
 import CompanyProfile from './pages/CompanyProfile';
@@ -13,8 +15,23 @@ import ProcessingPlant from './pages/ProcessingPlant';
 import Markets from './pages/Markets';
 import Sustainability from './pages/Sustainability';
 import FutureVision from './pages/FutureVision';
+import NotFound from './pages/NotFound';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <BrowserRouter>
       <ScrollToHashElement />
@@ -31,6 +48,7 @@ function App() {
           <Route path="/markets" element={<Markets />} />
           <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/future-vision" element={<FutureVision />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </AppLayout>
     </BrowserRouter>

@@ -13,12 +13,12 @@ export default function Operations() {
 
   return (
     <div className="operations-page fade-in">
-      <PageHero title="Mining & Processing Operations" subtitle="A clear quarry-to-delivery system for consistent natural stone supply." badge="Operations" />
+      <PageHero title="Mining & Processing Operations" subtitle="A clear quarry-to-delivery system for consistent natural stone supply." badge="Operations Overview" />
 
       <section className="section">
         <div className="container page-brief-grid">
           <div>
-            <span className="section-badge">Operational Model</span>
+            <span className="section-badge">operations overview</span>
             <h2 className="section-title" style={{ textAlign: 'left' }}>{miningData.overview.title}</h2>
             <p className="page-lead">{miningData.overview.paragraphs[0]}</p>
             <p className="page-copy">{processingData.overview.paragraphs[0]}</p>

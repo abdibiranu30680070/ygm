@@ -7,7 +7,7 @@ export default function MiningOverview() {
     <section className="section" style={{ borderBottom: '1px solid var(--border-color)' }}>
       <div className="container" style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: 'var(--space-2xl)', alignItems: 'center' }}>
         <div>
-          <span className="section-badge">Overview</span>
+          <span className="section-badge">industrial mining</span>
           <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 'var(--space-md)' }}>{overview.title}</h2>
           {overview.paragraphs.map((para, idx) => (
             <p key={idx} style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.8', marginBottom: idx < overview.paragraphs.length - 1 ? '15px' : '0' }}>

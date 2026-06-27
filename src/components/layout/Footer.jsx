@@ -1,13 +1,17 @@
 /* src/components/layout/Footer.jsx */
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Globe, Mail, Phone, MapPin, ArrowRight, Mountain } from 'lucide-react';
+import { Globe, Mail, Phone, MapPin, ArrowRight, Mountain, CheckCircle } from 'lucide-react';
 import '../../styles/footer.css';
 
 export default function Footer() {
+  const [isSubscribed, setIsSubscribed] = useState(false);
+
   const handleSubscribe = (e) => {
     e.preventDefault();
-    alert('Thank you for subscribing! We will keep you updated.');
+    setIsSubscribed(true);
     e.target.reset();
+    setTimeout(() => setIsSubscribed(false), 3000);
   };
 
   return (
@@ -74,17 +78,24 @@ export default function Footer() {
                 <Phone size={14} style={{ color: 'var(--accent-primary)', flexShrink: 0 }} /> +251 116 894 029
               </div>
             </div>
-            <form className="newsletter-form" onSubmit={handleSubscribe}>
-              <input
-                type="email"
-                placeholder="Subscribe for updates"
-                className="newsletter-input"
-                required
-              />
-              <button type="submit" className="btn btn-primary" style={{ padding: '10px 18px' }} aria-label="Subscribe">
-                <ArrowRight size={18} />
-              </button>
-            </form>
+            {isSubscribed ? (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--accent-success)', fontSize: '0.85rem', padding: '8px 12px', background: 'rgba(22, 163, 74, 0.1)', borderRadius: 'var(--radius-sm)' }}>
+                <CheckCircle size={16} />
+                <span>Subscribed successfully!</span>
+              </div>
+            ) : (
+              <form className="newsletter-form" onSubmit={handleSubscribe}>
+                <input
+                  type="email"
+                  placeholder="Subscribe for updates"
+                  className="newsletter-input"
+                  required
+                />
+                <button type="submit" className="btn btn-primary" style={{ padding: '10px 18px' }} aria-label="Subscribe">
+                  <ArrowRight size={18} />
+                </button>
+              </form>
+            )}
           </div>
         </div>
 
