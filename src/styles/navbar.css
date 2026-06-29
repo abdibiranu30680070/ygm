@@ -89,11 +89,11 @@
 }
 
 .nav-link:hover {
-  color: var(--text-primary);
+  color: var(--accent-secondary);
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  width: 0;
 }
 
 .nav-link.active {
@@ -522,7 +522,7 @@
 
   .dropdown-item:hover {
     background: rgba(22, 101, 167, 0.06);
-    color: var(--accent-primary);
+    color: var(--accent-secondary);
   }
 
   .home-navbar .dropdown-item {
@@ -530,7 +530,7 @@
   }
 
   .home-navbar .dropdown-item:hover {
-    color: #00aeea;
-    background: rgba(0, 174, 234, 0.06);
+    color: var(--accent-secondary);
+    background: rgba(22, 101, 167, 0.06);
   }
 }
