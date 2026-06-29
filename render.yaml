@@ -1,7 +1,11 @@
 services:
   - type: web
     name: ymg-landing-page
-    env: node
+    env: static
     buildCommand: npm run build
-    startCommand: node server.js
     publish: dist
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
