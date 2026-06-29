@@ -11,9 +11,9 @@ export default function ProfileHero() {
         <h1 className="hero-title" style={{ fontSize: '2.8rem', marginBottom: 'var(--space-md)' }}>
           {hero.title}
         </h1>
-        <p className="hero-desc" style={{ fontSize: '1.05rem', margin: '0 auto', maxWidth: '700px', color: 'var(--text-secondary)' }}>
+        <p className="hero-desc" style={{ fontSize: '1.05rem', margin: '0 auto', maxWidth: '700px', color: '#ffffff' }}>
           {hero.companyName} <br />
-          <span style={{ fontSize: '0.95rem', color: 'var(--accent-primary)', marginTop: '8px', display: 'block' }}>
+          <span style={{ fontSize: '0.95rem', color: '#ffffff', marginTop: '8px', display: 'block' }}>
             {hero.statement}
           </span>
         </p>

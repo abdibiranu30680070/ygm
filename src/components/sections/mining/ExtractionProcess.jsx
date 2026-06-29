@@ -1,5 +1,6 @@
 /* src/components/sections/mining/ExtractionProcess.jsx */
 import { miningData } from '../../../data/siteData';
+import '../../../styles/profile.css';
 
 export default function ExtractionProcess() {
   const { extractionProcess } = miningData;
@@ -12,7 +13,7 @@ export default function ExtractionProcess() {
           <p className="section-subtitle">{extractionProcess.intro}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 'var(--space-md)' }}>
+        <div className="extraction-process-grid">
           {extractionProcess.steps.map((proc, idx) => (
             <div key={idx} className="glass-panel" style={{ padding: 'var(--space-md)', position: 'relative' }}>
               <span style={{ fontSize: '2rem', fontWeight: 800, color: 'rgba(183,142,58,0.08)', fontFamily: 'var(--font-display)', position: 'absolute', top: '10px', right: '15px' }}>

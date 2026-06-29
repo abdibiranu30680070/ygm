@@ -1,5 +1,6 @@
 /* src/components/sections/mining/EquipmentFleet.jsx */
 import { miningData } from '../../../data/siteData';
+import '../../../styles/profile.css';
 
 export default function EquipmentFleet() {
   const { equipment } = miningData;
@@ -12,7 +13,7 @@ export default function EquipmentFleet() {
           <p className="section-subtitle">{equipment.intro}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-xl)' }}>
+        <div className="equipment-fleet-grid">
           <div className="glass-panel" style={{ padding: 'var(--space-xl)' }}>
             <h3 style={{ fontSize: '1.4rem', fontFamily: 'var(--font-display)', marginBottom: 'var(--space-md)', color: 'var(--accent-primary)' }}>Mining Machinery Fleet</h3>
             <ul style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', display: 'flex', flexDirection: 'column', gap: '10px', paddingLeft: '20px' }}>

@@ -34,34 +34,34 @@
   --border-color-subtle: rgba(0, 0, 0, 0.04);
 
   /* Text */
-  --text-primary: #0f172a;          /* Deep Slate */
-  --text-secondary: #475569;        /* Slate Gray */
-  --text-muted: #94a3b8;            /* Muted */
+  --text-primary: #2F353A;          /* YMG Primary Dark */
+  --text-secondary: #4A6278;        /* YMG Accent Blue */
+  --text-muted: #95A5A6;            /* YMG Highlight Grey */
   --text-on-dark: #f1f5f9;          /* Light */
   --text-on-dark-secondary: #cbd5e1;
 
-  /* Accent Colors — Professional Blue-Teal + Gold */
-  --accent-primary: #1665a7;        /* Professional Deep Blue */
-  --accent-primary-rgb: 22, 101, 167;
-  --accent-primary-light: #2b82cc;  /* Lighter Blue */
-  --accent-primary-dark: #0e4f82;   /* Darker Blue */
+  /* Accent Colors — YMG Official Palette */
+  --accent-primary: #4A6278;        /* YMG Accent Blue */
+  --accent-primary-rgb: 74, 98, 120;
+  --accent-primary-light: #6B8299;  /* Lighter Accent Blue */
+  --accent-primary-dark: #2F353A;   /* YMG Primary Dark */
   --accent-secondary: #b78e3a;      /* Burnished Gold (kept for stone identity) */
   --accent-secondary-rgb: 183, 142, 58;
-  --accent-tertiary: #0f8b8d;       /* Teal accent */
+  --accent-tertiary: #95A5A6;       /* YMG Highlight Grey */
   --accent-success: #16a34a;
   --accent-warning: #d97706;
   --accent-danger: #dc2626;
 
   /* Gradients */
-  --gradient-hero: linear-gradient(135deg, #1665a7 0%, #2b82cc 50%, #0f8b8d 100%);
-  --gradient-hero-vivid: linear-gradient(135deg, #2b82cc 0%, #38a3e8 40%, #1665a7 100%);
+  --gradient-hero: linear-gradient(135deg, #2F353A 0%, #4A6278 50%, #95A5A6 100%);
+  --gradient-hero-vivid: linear-gradient(135deg, #4A6278 0%, #6B8299 40%, #2F353A 100%);
   --gradient-gold: linear-gradient(135deg, #b78e3a 0%, #d4a94a 50%, #8b7355 100%);
-  --gradient-text: linear-gradient(to right, #0f172a, #334155);
-  --gradient-accent-text: linear-gradient(135deg, #1665a7 0%, #2b82cc 50%, #0f8b8d 100%);
+  --gradient-text: linear-gradient(to right, #2F353A, #4A6278);
+  --gradient-accent-text: linear-gradient(135deg, #2F353A 0%, #4A6278 50%, #95A5A6 100%);
   --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.35) 100%);
   --gradient-dark: linear-gradient(145deg, #0c1929 0%, #142236 50%, #091420 100%);
   --gradient-dark-radial: radial-gradient(ellipse at top left, #142236 0%, #0c1929 50%, #091420 100%);
-  --gradient-mesh: conic-gradient(from 180deg at 50% 50%, rgba(22,101,167,0.04) 0deg, transparent 60deg, rgba(15,139,141,0.03) 120deg, transparent 180deg, rgba(183,142,58,0.03) 240deg, transparent 300deg, rgba(22,101,167,0.04) 360deg);
+  --gradient-mesh: conic-gradient(from 180deg at 50% 50%, rgba(74,98,120,0.04) 0deg, transparent 60deg, rgba(149,165,166,0.03) 120deg, transparent 180deg, rgba(183,142,58,0.03) 240deg, transparent 300deg, rgba(74,98,120,0.04) 360deg);
 
   /* ── COMPACT Spacing ── */
   --space-xs: 0.2rem;

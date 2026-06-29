@@ -1,7 +1,17 @@
 /* src/styles/profile.css - Company Profile Page Responsive Styles */
 
+/* Prevent horizontal overflow on mobile */
+.company-profile-page,
+.mining-operations-page,
+.processing-plant-page {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 /* Profile Overview */
-.profile-overview-grid {
+.profile-overview-grid,
+.mining-overview-grid,
+.plant-overview-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: var(--space-2xl);
@@ -9,7 +19,9 @@
 }
 
 @media (max-width: 768px) {
-  .profile-overview-grid {
+  .profile-overview-grid,
+  .mining-overview-grid,
+  .plant-overview-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -60,6 +72,62 @@
   }
 }
 
+/* Extraction Process & Production Workflow (5-column grids) */
+.extraction-process-grid,
+.production-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+}
+
+@media (max-width: 1024px) {
+  .extraction-process-grid,
+  .production-workflow-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .extraction-process-grid,
+  .production-workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .extraction-process-grid,
+  .production-workflow-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Equipment Fleet (2-column grid) */
+.equipment-fleet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .equipment-fleet-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Equipment Technology (2-column grid with nested grid) */
+.equipment-technology-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .equipment-technology-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Management Philosophy */
 .management-philosophy-grid {
   display: grid;
@@ -99,5 +167,16 @@
   
   .profile-hero p {
     font-size: 0.9rem !important;
+  }
+}
+
+/* Table responsive fix */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.8rem;
+  }
+  
+  td {
+    padding: 6px 0 !important;
   }
 }

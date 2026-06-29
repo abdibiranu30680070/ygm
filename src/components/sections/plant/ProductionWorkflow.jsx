@@ -1,5 +1,6 @@
 /* src/components/sections/plant/ProductionWorkflow.jsx */
 import { processingData } from '../../../data/siteData';
+import '../../../styles/profile.css';
 
 export default function ProductionWorkflow() {
   const { workflow } = processingData;
@@ -12,7 +13,7 @@ export default function ProductionWorkflow() {
           <p className="section-subtitle">{workflow.intro}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 'var(--space-md)' }}>
+        <div className="production-workflow-grid">
           {workflow.steps.map((step, idx) => (
             <div key={idx} className="glass-panel" style={{ padding: 'var(--space-md)', position: 'relative' }}>
               <span style={{ fontSize: '2rem', fontWeight: 800, color: 'rgba(183,142,58,0.08)', fontFamily: 'var(--font-display)', position: 'absolute', top: '10px', right: '15px' }}>

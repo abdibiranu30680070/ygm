@@ -11,8 +11,8 @@ import ProductionCapacity from '../components/sections/mining/ProductionCapacity
 export default function MiningOperations() {
   return (
     <div className="mining-operations-page fade-in">
-      <div className="ambient-glow glow-indigo" style={{ top: '5%', left: '15%', width: '450px', height: '450px' }}></div>
-      <div className="ambient-glow glow-cyan" style={{ bottom: '20%', right: '10%', width: '400px', height: '400px' }}></div>
+      <div className="ambient-glow glow-indigo" style={{ top: '5%', left: '15%', width: '250px', height: '250px' }}></div>
+      <div className="ambient-glow glow-cyan" style={{ bottom: '20%', right: '10%', width: '200px', height: '200px' }}></div>
 
       <MiningHero />
       <MiningOverview />

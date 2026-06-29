@@ -121,9 +121,9 @@ a {
   gap: 5px;
   padding: 4px 12px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, rgba(22,101,167,0.06), rgba(22,101,167,0.12));
-  border: 1px solid rgba(22, 101, 167, 0.2);
-  color: var(--accent-primary);
+  background: linear-gradient(135deg, rgba(74,98,120,0.8), rgba(47,53,58,0.9));
+  border: 1px solid rgba(74, 98, 120, 0.3);
+  color: #ffffff;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -135,8 +135,8 @@ a {
 }
 
 .section-badge:hover {
-  background: linear-gradient(135deg, rgba(22,101,167,0.1), rgba(22,101,167,0.2));
-  border-color: rgba(22, 101, 167, 0.35);
+  background: linear-gradient(135deg, rgba(74,98,120,0.9), rgba(47,53,58,1));
+  border-color: rgba(74, 98, 120, 0.5);
   transform: translateY(-1px);
 }
 

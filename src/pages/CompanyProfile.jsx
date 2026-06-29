@@ -10,8 +10,8 @@ import PartnershipApproach from '../components/sections/profile/PartnershipAppro
 export default function CompanyProfile() {
   return (
     <div className="company-profile-page fade-in">
-      <div className="ambient-glow glow-indigo" style={{ top: '5%', left: '10%', width: '500px', height: '500px' }}></div>
-      <div className="ambient-glow glow-cyan" style={{ bottom: '25%', right: '5%', width: '400px', height: '400px' }}></div>
+      <div className="ambient-glow glow-indigo" style={{ top: '5%', left: '10%', width: '300px', height: '300px' }}></div>
+      <div className="ambient-glow glow-cyan" style={{ bottom: '25%', right: '5%', width: '250px', height: '250px' }}></div>
 
       <ProfileHero />
       <ProfileOverview />

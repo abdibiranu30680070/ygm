@@ -10,8 +10,8 @@ import EnvironmentalEfficiency from '../components/sections/plant/EnvironmentalE
 export default function ProcessingPlant() {
   return (
     <div className="processing-plant-page fade-in">
-      <div className="ambient-glow glow-indigo" style={{ top: '5%', right: '10%', width: '450px', height: '450px' }}></div>
-      <div className="ambient-glow glow-cyan" style={{ bottom: '25%', left: '5%', width: '400px', height: '400px' }}></div>
+      <div className="ambient-glow glow-indigo" style={{ top: '5%', right: '10%', width: '250px', height: '250px' }}></div>
+      <div className="ambient-glow glow-cyan" style={{ bottom: '25%', left: '5%', width: '200px', height: '200px' }}></div>
 
       <PlantHero />
       <PlantOverview />

@@ -279,11 +279,11 @@
 }
 
 .home-navbar .nav-link.active {
-  color: #00aeea;
+  color: var(--accent-primary);
 }
 
 .home-navbar .nav-link::after {
-  background: #00aeea;
+  background: var(--accent-primary);
 }
 
 .menu-toggle {
@@ -349,13 +349,15 @@
     left: 0;
     right: 0;
     bottom: 0;
+    height: calc(100vh - 60px);
+    max-height: calc(100vh - 60px);
     background-color: #0a1628 !important;
     background-image: none !important;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     flex-direction: column;
     align-items: flex-start !important;
-    padding: 30px 24px !important;
+    padding: 40px 24px !important;
     gap: var(--space-md) !important;
     transform: translateX(100%);
     transition: transform var(--transition-smooth);
@@ -386,7 +388,7 @@
 
   .nav-link.active,
   .home-navbar .nav-link.active {
-    color: #00aeea !important;
+    color: var(--accent-primary) !important;
   }
 
   /* Style parent sub-menus like navigation categories on mobile */
