@@ -1,5 +1,6 @@
 /* src/components/sections/profile/BusinessActivities.jsx */
 import { profileData } from '../../../data/siteData';
+import '../../../styles/profile.css';
 
 export default function BusinessActivities() {
   const { activities } = profileData;
@@ -12,7 +13,7 @@ export default function BusinessActivities() {
           <p className="section-subtitle">{activities.intro}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-2xl)' }}>
+        <div className="business-activities-grid">
           {/* Granite Mining */}
           <div className="glass-panel" style={{ padding: 'var(--space-2xl)', borderTop: '3px solid var(--accent-primary)' }}>
             <h3 style={{ fontSize: '1.5rem', fontFamily: 'var(--font-display)', marginBottom: '15px' }}>{activities.granite.title}</h3>

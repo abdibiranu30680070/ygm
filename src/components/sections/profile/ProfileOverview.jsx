@@ -1,11 +1,12 @@
 /* src/components/sections/profile/ProfileOverview.jsx */
 import { profileData } from '../../../data/siteData';
+import '../../../styles/profile.css';
 
 export default function ProfileOverview() {
   const { overview } = profileData;
   return (
     <section className="section" style={{ borderBottom: '1px solid var(--border-color)' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: 'var(--space-2xl)', alignItems: 'center' }}>
+      <div className="container profile-overview-grid">
         <div>
           <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 'var(--space-md)' }}>{overview.title}</h2>
           {overview.paragraphs.map((para, idx) => (

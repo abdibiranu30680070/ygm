@@ -1,11 +1,12 @@
 /* src/components/sections/profile/ManagementPhilosophy.jsx */
 import { profileData } from '../../../data/siteData';
+import '../../../styles/profile.css';
 
 export default function ManagementPhilosophy() {
   const { philosophy, objectives } = profileData;
   return (
     <section className="section" style={{ borderBottom: '1px solid var(--border-color)' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-2xl)' }}>
+      <div className="container management-philosophy-grid">
         {/* Philosophy */}
         <div className="glass-panel" style={{ padding: 'var(--space-2xl)' }}>
           <h3 style={{ fontSize: '1.5rem', fontFamily: 'var(--font-display)', marginBottom: '15px' }}>{philosophy.title}</h3>

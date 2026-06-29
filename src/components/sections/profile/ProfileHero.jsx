@@ -1,10 +1,11 @@
 /* src/components/sections/profile/ProfileHero.jsx */
 import { profileData } from '../../../data/siteData';
+import '../../../styles/profile.css';
 
 export default function ProfileHero() {
   const { hero } = profileData;
   return (
-    <section className="hero hero-small" style={{ borderBottom: '1px solid var(--border-color)' }}>
+    <section className="hero hero-small profile-hero" style={{ borderBottom: '1px solid var(--border-color)' }}>
       <div className="container" style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto' }}>
         <span className="section-badge">{hero.badge}</span>
         <h1 className="hero-title" style={{ fontSize: '2.8rem', marginBottom: 'var(--space-md)' }}>

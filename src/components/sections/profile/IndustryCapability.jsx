@@ -1,11 +1,12 @@
 /* src/components/sections/profile/IndustryCapability.jsx */
 import { profileData } from '../../../data/siteData';
+import '../../../styles/profile.css';
 
 export default function IndustryCapability() {
   const { capabilities } = profileData;
   return (
     <section className="section" style={{ borderBottom: '1px solid var(--border-color)' }}>
-      <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 'var(--space-2xl)', alignItems: 'center' }}>
+      <div className="container industry-capability-grid">
         <div>
           <span className="section-badge">Capabilities</span>
           <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 'var(--space-md)' }}>{capabilities.title}</h2>

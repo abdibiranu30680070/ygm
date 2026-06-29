@@ -1,5 +1,6 @@
 /* src/components/sections/profile/OperationalModel.jsx */
 import { profileData } from '../../../data/siteData';
+import '../../../styles/profile.css';
 
 export default function OperationalModel() {
   const { operationalModel } = profileData;
@@ -12,7 +13,7 @@ export default function OperationalModel() {
           <p className="section-subtitle">{operationalModel.intro}</p>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'var(--space-lg)' }}>
+        <div className="operational-model-grid">
           {operationalModel.steps.map((step, idx) => (
             <div key={idx} className="glass-panel" style={{ padding: 'var(--space-xl)', borderTop: '3px solid var(--accent-primary)', position: 'relative' }}>
               <span style={{ fontSize: '2.5rem', fontWeight: 800, color: 'rgba(183,142,58,0.12)', fontFamily: 'var(--font-display)', position: 'absolute', top: '10px', right: '15px' }}>

@@ -1,0 +1,103 @@
+/* src/styles/profile.css - Company Profile Page Responsive Styles */
+
+/* Profile Overview */
+.profile-overview-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .profile-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Business Activities */
+.business-activities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+@media (max-width: 768px) {
+  .business-activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Industry Capability */
+.industry-capability-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .industry-capability-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Operational Model */
+.operational-model-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+@media (max-width: 1024px) {
+  .operational-model-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .operational-model-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Management Philosophy */
+.management-philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+@media (max-width: 768px) {
+  .management-philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Partnership Approach */
+.partnership-approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .partnership-approach-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Profile Hero */
+.profile-hero {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .profile-hero h1 {
+    font-size: 2rem !important;
+  }
+  
+  .profile-hero p {
+    font-size: 0.9rem !important;
+  }
+}
