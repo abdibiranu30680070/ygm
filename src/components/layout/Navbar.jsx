@@ -147,10 +147,10 @@ export default function Navbar() {
                         textAlign: 'left',
                         padding: '6px 0',
                         color: 'inherit',
-                        fontSize: 'inherit',
-                        fontWeight: 'inherit',
-                        fontFamily: 'inherit',
-                        letterSpacing: 'inherit',
+                        fontSize: '0.9rem',
+                        fontWeight: '500',
+                        fontFamily: 'var(--font-accent)',
+                        letterSpacing: '0.01em',
                       }}
                     >
                       {item.label}
