@@ -1,6 +1,7 @@
 /* src/components/layout/AppLayout.jsx */
 import Navbar from './Navbar';
 import Footer from './Footer';
+import BackToTop from './BackToTop';
 import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ export default function AppLayout({ children }) {
         {children}
       </main>
       <Footer />
+      <BackToTop />
     </div>
   );
 }

@@ -105,6 +105,11 @@
   width: 100%;
 }
 
+/* Hide chevron icons on desktop */
+.nav-item-dropdown > .nav-link svg {
+  display: none;
+}
+
 /* Nav Actions */
 .nav-actions {
   display: flex;
@@ -402,15 +407,21 @@
     margin-top: 10px !important;
     padding-bottom: 2px !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-    display: block !important;
+    display: flex !important;
     width: 100% !important;
-    pointer-events: none !important; /* Touch action header only */
+    pointer-events: auto !important;
+    justify-content: space-between !important;
   }
 
   /* Remove hover indicator lines for dropdown categories on mobile */
   .nav-item-dropdown > .nav-link::after,
   .home-navbar .nav-item-dropdown > .nav-link::after {
     display: none !important;
+  }
+
+  /* Show chevron icons on mobile */
+  .nav-item-dropdown > .nav-link svg {
+    display: block !important;
   }
 
   .nav-actions {

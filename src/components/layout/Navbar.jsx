@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
+  ChevronDown,
+  ChevronUp,
   Globe2,
   Mail,
   MapPin,
@@ -17,6 +19,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState({});
   const location = useLocation();
 
   useEffect(() => {
@@ -26,6 +29,13 @@ export default function Navbar() {
   }, []);
 
   const closeMenu = () => setIsMenuOpen(false);
+
+  const toggleDropdown = (itemTo) => {
+    setOpenDropdowns(prev => ({
+      ...prev,
+      [itemTo]: !prev[itemTo]
+    }));
+  };
 
   const isActive = (path) => {
     if (path === '/') return location.pathname === '/' ? 'active' : '';
@@ -118,19 +128,48 @@ export default function Navbar() {
           <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
             {navItems.map((item) => (
               <li key={item.to} className={item.children ? 'nav-item-dropdown' : ''}>
-                <Link to={item.to} className={`nav-link ${isActive(item.to)}`} onClick={closeMenu}>
-                  {item.label}
-                </Link>
-                {item.children && (
-                  <ul className="dropdown-menu">
-                    {item.children.map((subItem) => (
-                      <li key={subItem.to}>
-                        <Link to={subItem.to} className="dropdown-item" onClick={closeMenu}>
-                          {subItem.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
+                {item.children ? (
+                  <>
+                    <button
+                      className={`nav-link ${isActive(item.to)}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        toggleDropdown(item.to);
+                      }}
+                      style={{
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        width: '100%',
+                        textAlign: 'left',
+                        padding: '6px 0',
+                        color: 'inherit',
+                        fontSize: 'inherit',
+                        fontWeight: 'inherit',
+                        fontFamily: 'inherit',
+                        letterSpacing: 'inherit',
+                      }}
+                    >
+                      {item.label}
+                      {openDropdowns[item.to] ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                    </button>
+                    <ul className="dropdown-menu" style={{ display: openDropdowns[item.to] ? 'block' : 'none' }}>
+                      {item.children.map((subItem) => (
+                        <li key={subItem.to}>
+                          <Link to={subItem.to} className="dropdown-item" onClick={closeMenu}>
+                            {subItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <Link to={item.to} className={`nav-link ${isActive(item.to)}`} onClick={closeMenu}>
+                    {item.label}
+                  </Link>
                 )}
               </li>
             ))}
