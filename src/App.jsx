@@ -15,6 +15,7 @@ import ProcessingPlant from './pages/ProcessingPlant';
 import Markets from './pages/Markets';
 import Sustainability from './pages/Sustainability';
 import FutureVision from './pages/FutureVision';
+import Gallery from './pages/Gallery';
 import NotFound from './pages/NotFound';
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Route path="/markets" element={<Markets />} />
           <Route path="/sustainability" element={<Sustainability />} />
           <Route path="/future-vision" element={<FutureVision />} />
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </AppLayout>

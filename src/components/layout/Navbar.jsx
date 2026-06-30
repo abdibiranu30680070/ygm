@@ -73,6 +73,7 @@ export default function Navbar() {
     { to: '/markets', label: 'Markets' },
     { to: '/sustainability', label: 'Sustainability' },
     { to: '/future-vision', label: 'Future Vision' },
+    { to: '/gallery', label: 'Gallery' },
   ];
 
   return (
